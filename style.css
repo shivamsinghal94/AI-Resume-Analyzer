@@ -1,0 +1,423 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0066ff, #00c6ff);
+    min-height: 100vh;
+    color: #222;
+}
+
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 35px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+h1 {
+    text-align: center;
+    font-size: 34px;
+    margin: 0 0 8px;
+    color: #111827;
+}
+
+.subtitle {
+    text-align: center;
+    color: #6b7280;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   UPLOAD BOX
+========================================= */
+
+.upload-box {
+    border: 2px dashed #2196f3;
+    padding: 30px;
+    text-align: center;
+    border-radius: 16px;
+    background: #f7fbff;
+}
+
+.upload-box h2 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.upload-box h3 {
+    margin-top: 25px;
+    color: #374151;
+}
+
+.upload-box p {
+    color: #6b7280;
+}
+
+input[type="file"] {
+    margin: 18px 0;
+    padding: 10px;
+    max-width: 100%;
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    outline: none;
+    background: white;
+}
+
+textarea:focus {
+    border-color: #2196f3;
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.12);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+button {
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(33, 150, 243, 0.3);
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+    margin: 25px 0;
+    padding: 15px 18px;
+    background: #e8f7ed;
+    color: #176b2c;
+    border-left: 5px solid #28a745;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   RESULT BOX
+========================================= */
+
+.result-box {
+    margin-top: 25px;
+    padding: 25px;
+    background: #f8fbff;
+    border: 1px solid #dceeff;
+    border-radius: 16px;
+}
+
+.result-box h2 {
+    margin-top: 0;
+    color: #111827;
+    border-bottom: 2px solid #e5eef8;
+    padding-bottom: 12px;
+}
+
+
+/* =========================================
+   RESUME SCORE
+========================================= */
+
+.score-box {
+    text-align: center;
+}
+
+.score {
+    margin: 15px auto;
+}
+
+.score-number {
+    font-size: 64px;
+    font-weight: bold;
+    color: #2196f3;
+}
+
+.score-total {
+    font-size: 25px;
+    color: #6b7280;
+}
+
+
+/* =========================================
+   JOB MATCH SCORE
+========================================= */
+
+.match-score {
+    text-align: center;
+    margin: 20px 0 30px;
+}
+
+.match-number {
+    font-size: 58px;
+    font-weight: bold;
+    color: #2196f3;
+}
+
+.match-label {
+    display: block;
+    color: #6b7280;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   SECTION ANALYSIS
+========================================= */
+
+.section-analysis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.section-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-name {
+    font-weight: 600;
+    color: #374151;
+}
+
+.status {
+    font-size: 13px;
+    font-weight: bold;
+    padding: 7px 11px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.present {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.missing {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.skill {
+    background: #2196f3;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.skill.matched {
+    background: #28a745;
+}
+
+.skill.missing-skill {
+    background: #dc3545;
+}
+
+
+/* =========================================
+   JOB SECTIONS
+========================================= */
+
+.job-section {
+    margin-top: 25px;
+}
+
+.job-section h3 {
+    color: #374151;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   IMPROVEMENT SUGGESTIONS
+========================================= */
+
+.suggestions-box {
+    border-left: 5px solid #2196f3;
+}
+
+.suggestion-intro {
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+
+.suggestions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    background: white;
+
+    padding: 15px 17px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.suggestion-icon {
+    font-size: 20px;
+}
+
+.suggestion-text {
+    color: #374151;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   EXTRACTED TEXT
+========================================= */
+
+.resume-text {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    max-height: 400px;
+
+    overflow-y: auto;
+
+    white-space: pre-wrap;
+
+    line-height: 1.6;
+
+    border: 1px solid #e5e7eb;
+
+    color: #374151;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .section-analysis {
+        grid-template-columns: 1fr;
+    }
+
+    .section-item {
+        padding: 13px;
+    }
+
+    .score-number {
+        font-size: 50px;
+    }
+
+    .match-number {
+        font-size: 45px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+/* DOWNLOAD REPORT BUTTON */
+
+.download-section {
+    margin-top: 25px;
+}
+
+.download-button {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #2196f3, #1976d2);
+    color: white;
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.download-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(33, 150, 243, 0.3);
+}

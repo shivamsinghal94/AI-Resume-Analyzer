@@ -1,0 +1,14 @@
+venv/
+.venv/
+
+__pycache__/
+*.pyc
+*.pyo
+
+resumes/*.pdf
+reports/*.pdf
+
+.vscode/
+
+.DS_Store
+Thumbs.db
